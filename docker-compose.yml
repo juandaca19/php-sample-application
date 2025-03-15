@@ -5,6 +5,8 @@ services:
     build: .
     ports:
       - "8080:80"
+    volumes:
+      - .:/var/www/html  # <---- Esto monta el código correctamente
     depends_on:
       - db
 
